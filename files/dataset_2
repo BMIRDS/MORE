@@ -1,0 +1,37 @@
+W1, W2, H, SP, WP, LC, WL, Li
+Anemia, Appendicitis, 0.031, 0.65, 0.22, 0.91, 0.61, 0.13
+Dementia, Atopic Dermatitis, 0.062, 0.6, 0.2, 0.79, 0.58, 0.1
+Bacterial Pneumonia, Malaria, 0.156, 0.65, 0.22, 0.91, 0.61, 0.13
+Osteoporosis, Patent Ductus Arteriosus, 0.156, 0.6, 0.2, 0.79, 0.58, 0.1
+Amino Acid Sequence, AntiBacterial Agents, 0.156, 0, 0, 1.1, 0.31, 0
+Acquired Immunodeficiency Syndrome, Congenital Heart Defects, 0.062, 0.7, 0.25, 1.05, 0.65, 0.16
+Otitis Media, Infantile Colic, 0.156, 0.55, 0.18, 0.69, 0.55, 0.08
+Meningitis, Tricuspid Atresia, 0.031, 0.65, 0.22, 0.91, 0.61, 0.13
+Sinusitis, Mental Retardation, 0.031, 0.65, 0.22, 0.91, 0.61, 0.13
+Hypertension, Kidney Failure, 0.5, 0.65, 0.22, 0.91, 0.61, 0.13
+Hyperlipidemia, Hyperkalemia, 0.156, 0.85, 0.66, 1.61, 0.88, 0.51
+Hypothyroidism, Hyperthyroidism, 0.406, 0.9, 0.75, 1.89, 0.92, 0.63
+Sarcoidosis, Tuberculosis, 0.406, 0.5, 0.16, 0.59, 0.53, 0.07,
+Vaccines, Immunity, 0.593, 0, 0, 1.5, 0.43, 0
+Asthma, Pneumonia, 0.375, 0.85, 0.66, 1.6, 0.88, 0.52
+Diabetic Nephropathy, Diabetes Mellitus, 0.5, 0.95, 0.85, 2.3, 0.95, 0.77
+Lactose Intolerance, Irritable Bowel Syndrome, 0.468, 0.75, 0.61, 1.2, 0.85, 0.36
+Urinary Tract Infection, Pyelonephritis, 0.656, 0.8, 0.6, 1.38, 0.86, 0.42
+Neonatal Jaundice, Sepsis, 0.187, 0.7, 0.25, 1.05, 0.65, 0.16
+Sickle Cell Anemia, Iron Deficiency Anemia, 0.437, 0.75, 0.61, 1.2, 0.85, 0.36
+Psychology, Cognitive Science, 0.593, 0.972, 0.88, 2.89, 0.97, 0.8
+Adenovirus, Rotavirus, 0.437, 0.75, 0.54, 1.2, 0.83, 0.35
+Migraine, Headache, 0.718, 0.6, 0.33, 0.79, 0.7, 0.17
+Myocardial Ischemia, Myocardial Infarction, 0.75, 0.95, 0.9, 2.3, 0.97, 0.8
+Hepatitis B, Hepatitis C, 0.562, 0.9, 0.83, 1.89, 0.94, 0.66
+Carcinoma, Neoplasm, 0.75, 0.85, 0.57, 1.61, 0.87, 0.45
+Pulmonary Valve Stenosis, Aortic Valve Stenosis, 0.531, 0.9, 0.8, 1.89, 0.93, 0.66
+Failure to Thrive, Malnutrition, 0.625, 0.65, 0.22, 0.91, 0.61, 0.13
+Breast Feeding, Lactation, 0.843, 0.75, 0.18, 1.28, 0.6, 0.08
+Antibiotics, Antibacterial Agents, 0.937, 1, 1, 3.58, 1, 0.99
+Seizures, Convulsions, 0.843, 0.95, 0.9, 2.3, 0.97, 0.81
+Pain, Ache, 0.875, 1, 1, 2.99, 1, 0.99
+Malnutrition, Nutritional Deficiency, 0.875, 1, 1, 2.99, 1, 0.98
+Measles, Rubeola, 0.906, 1, 1, 2.99, 1, 0.99
+Chicken Pox, Varicella, 0.968, 1, 1, 2.99, 1, 0.99
+Down Syndrome, Trisomy 21, 0.875, 1, 1, 2.99, 1, 0.99
