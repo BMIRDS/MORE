@@ -58,20 +58,25 @@ On Mac, add `-undefined dynamic_lookup` to the g++ command. The flag `-D_GLIBCXX
 ### Matrices
 
 ## 5. Training
-### Command for training baseline
+### Training Baseline
 
 ```
 python main.py --train_data ./corpus.txt --save_path ./save/ --use_ontologies=False --batch_size=1024 --epochs_to_train=10 --train_model=True > ./log.txt
 ```
 
-### Command for training with ontologies
+### Training with Ontologies
 ```
 python main.py --train_data ./corpus.txt --save_path ./save/ --use_ontologies=True --batch_size=1024 --epochs_to_train=10 --learning_rate=0.3 --train_model=True > ./log.txt
 ```
 
 ## 6. Evaluation
+
+### Datasets
+
+### Generating Evaluation Report
+
 ```
-python main.py --train_data ./corpus.txt --save_path ./save/ --train_model=False --use_ontologies=False
+python main.py --train_data ./corpus.txt --save_path ./save/ --train_model=False --use_ontologies=False --ds_1="./files/dataset_1" --ds_2="./files/dataset_2"
 ```
 
 
