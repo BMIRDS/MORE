@@ -3,7 +3,7 @@
 By Steven Jiang and Saeed Hassanpour
 
 
-![alt text](./figures/MORE.png "MORE")
+![](./figures/MORE.png)
 
 ## Dependencies
 
