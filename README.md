@@ -17,8 +17,10 @@ RadCore is a large multi-institutional radiology report corpus for NLP. RadCore 
 Medical Information Mart for Intensive Care (MIMIC-III) is a database containing information gathered from patients that were admitted to critical care units at a large hospital. MIMIC-III also contains a gold standard corpus of 2,434 ICU nursing notes accessible [here](https://mimic.physionet.org/gettingstarted/access/).
 
 ```
-Citation:
-MIMIC-III, a freely accessible critical care database. Johnson AEW, Pollard TJ, Shen L, Lehman L, Feng M, Ghassemi M, Moody B, Szolovits P, Celi LA, and Mark RG. Scientific Data (2016). DOI: 10.1038/sdata.2016.35. Available from: http://www.nature.com/articles/sdata201635
+MIMIC-III, a freely accessible critical care database. Johnson AEW, 
+Pollard TJ, Shen L, Lehman L, Feng M, Ghassemi M, Moody B, Szolovits P, 
+Celi LA, and Mark RG. Scientific Data (2016). DOI: 10.1038/sdata.2016.35. 
+Available from: http://www.nature.com/articles/sdata201635
 ```
 
 
