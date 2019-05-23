@@ -2,6 +2,9 @@
 
 By Steven Jiang and Saeed Hassanpour
 
+
+![alt text](./figures/MORE.png "MORE")
+
 ## Dependencies
 
 # Usage
@@ -13,3 +16,14 @@ By Steven Jiang and Saeed Hassanpour
 ## 3. Training
 
 ## 4. Evaluation
+
+
+
+# Results
+
+
+
+
+Physician Similarity Correlation             |  Expert Similarity Correlation
+:-------------------------:|:-------------------------:
+![](./figures/PhysicianGraph.png)  |  ![](./figures/ExpertGraph.png)
