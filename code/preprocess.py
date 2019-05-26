@@ -138,6 +138,8 @@ def process_file(file_name):
                         file_text.append(word)
             except:
                 pass
+        for word in file_text:
+            print(word)
         return file_text
 
 
