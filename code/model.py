@@ -339,7 +339,7 @@ class Word2Vec(object):
         pairs_1, phys_1, expert_1 = read_eval_ds(eval_ds)
         unused_pairs = set()
         similarities_1 = []
-        # Get evaluation similarities for dataset 1
+        # Get evaluation similarities for evaluation dataset
         for i in range(len(pairs_1)):
             pair = pairs_1[i]
             phrase1 = pair[0]

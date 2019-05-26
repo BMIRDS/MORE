@@ -55,7 +55,10 @@ On Mac, add `-undefined dynamic_lookup` to the g++ command. The flag `-D_GLIBCXX
 
 ## 4. Preprocessing
 ### Corpora 
+To preprocess the corpora, run the `process_file()` command in the `preprocess.py` file. The function returns the cleaned and tokenized text in a list and also prints the output. If no other preprocessing is required, simply cat the output to a .txt file.
+
 ### Matrices
+To generate the similarity matrices, simply run the `umls-similarity.pl` script (available [here](https://metacpan.org/pod/distribution/UMLS-Similarity/utils/umls-similarity.pl)) with the `--matrix` and `--infile` configurations, where `--infile` takes the name of a text file containing one word per line.
 
 ## 5. Training
 ### Training Baseline
@@ -71,12 +74,19 @@ python main.py --train_data ./corpus.txt --save_path ./save/ --use_ontologies=Tr
 
 ## 6. Evaluation
 
-### Datasets
+### Dataset
+In 2007, Pedersen et al. introduced a test set of word pairs for the evaluation of measures of semantic similarity and relatedness in the biomedical domain. The 30 concept pairs of medical terms (See Table 1) were scored by multiple physicians and domain experts on a 4-point scale, according to their relatedness: “practically synonymous (4.0), related (3.0), marginally related (2.0) and unrelated (1.0).” In our study, term pair 5, “Delusion — Schizophrenia”, was excluded from the final evaluation dataset because one of the terms did not appear a minimum of five times in our combined corpora. As a result, the resulting test set consists of 29 of the 30 original pairs. To evaluate the different measures, we calculate the correlation between the similarity scores outputted by the measure and the Physician/Expert similarity scores.
+
+```
+Pedersen, T., Pakhomov, S. V., Patwardhan, S., & Chute, C. G. (2007). 
+Measures of semantic similarity and relatedness in the biomedical domain. 
+Journal of biomedical informatics, 40(3), 288-299.
+```
 
 ### Generating Evaluation Report
 
 ```
-python main.py --train_data ./corpus.txt --save_path ./save/ --train_model=False --use_ontologies=False --ds_1="./files/dataset_1" --ds_2="./files/dataset_2"
+python main.py --train_data ./corpus.txt --save_path ./save/ --train_model=False --use_ontologies=False --eval_ds="./files/eval_ds"
 ```
 
 
