@@ -335,12 +335,10 @@ class Word2Vec(object):
         return cos_similarity
 
     """Calculate evaluation similarities."""
-    def get_eval_sims(self, out_file, ds_1_f="../Data/Test Dataset/dataset_1", ds_2_f="../Data/Test Dataset/dataset_2"):
-        pairs_1, phys_1, expert_1 = read_ds_1(ds_1_f)
-        pairs_2, human_2 = read_ds_2(ds_2_f)
+    def get_eval_sims(self, out_file, eval_ds):
+        pairs_1, phys_1, expert_1 = read_eval_ds(eval_ds)
         unused_pairs = set()
         similarities_1 = []
-        similarities_2 = []
         # Get evaluation similarities for dataset 1
         for i in range(len(pairs_1)):
             pair = pairs_1[i]
@@ -357,23 +355,8 @@ class Word2Vec(object):
                 print("{} — {}: {}".format(phrase1, phrase2, sim))
             else:
                 unused_pairs.add(pair)
-
-        # Get evaluation similarities for dataset 2
-        for i in range(len(pairs_2)):
-            pair = pairs_2[i]
-            phrase1 = pair[0]
-            phrase2 = pair[1]
-            phrase_1_idxs = [self._word2id[w] for w in clean_phrase(phrase1) if w in self._word2id]
-            phrase_2_idxs = [self._word2id[w] for w in clean_phrase(phrase2) if w in self._word2id]
-            if phrase_1_idxs and phrase_2_idxs:
-                cos_similarity = self.calc_sim(phrase_1_idxs, phrase_2_idxs)
-                sim = self._session.run(cos_similarity)
-                similarities_2.append((pair, human_2[i], sim))
-                print("{} — {}: {}".format(phrase1, phrase2, sim))
-            else:
-                unused_pairs.add(pair)
         # Write evaluation similarities to csv file
-        write_report(out_file, similarities_1, similarities_2, unused_pairs)
+        write_report(out_file, similarities_1, unused_pairs)
 
     """Calculate embeddings from checkpoint folder for evaluation."""
     def get_embeddings_from_ckpt(self, ckpt_dir):

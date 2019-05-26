@@ -97,12 +97,8 @@ flags.DEFINE_integer("checkpoint_interval", 600,
                      "Checkpoint the model (i.e. save the parameters) every n "
                      "seconds (rounded up to statistics interval).")
 flags.DEFINE_string(
-    "ds_1", "./files/dataset_1", "File path for evaluation dataset 1"
+    "eval_ds", "./files/eval_ds", "File path for evaluation dataset"
 )
-flags.DEFINE_string(
-    "ds_2", "./files/dataset_2", "File path for evaluation dataset 2"
-)
-
 FLAGS = flags.FLAGS
 
 
@@ -127,7 +123,7 @@ def main(_):
             with tf.device("/cpu:0"):
                 model = Word2Vec(opts, session)
                 model.get_embeddings_from_ckpt('./Results/wup_lch_nam/com_30_p/')
-                model.get_eval_sims("./Results/wup_lch_nam/com_30_p_report.csv", ds_1_f=FLAGS.ds_1, ds_2_f=FLAGS.ds_2)
+                model.get_eval_sims("./Results/wup_lch_nam/com_30_p_report.csv", eval_ds=FLAGS.eval_ds)
 
 if __name__ == "__main__":
     tf.app.run()

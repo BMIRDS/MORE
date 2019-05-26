@@ -21,7 +21,7 @@ def load_matrix(idx_file, matrix_file, map_cui_to_term=False, cui_to_term_f=None
 
 
 # Read dataset 1 for evaluation
-def read_ds_1(f_name):
+def read_eval_ds(f_name):
     word_pairs = []
     phys = []
     expert = []
@@ -35,38 +35,19 @@ def read_ds_1(f_name):
     return word_pairs, phys, expert
 
 
-# Read dataset 2 for evaluation
-def read_ds_2(f_name):
-    word_pairs = []
-    human = []
-    with open(f_name, "r") as f:
-        lines = f.readlines()
-        for line in lines[1:]:
-            line = [x.strip() for x in line.split(",")]
-            word_pairs.append((line[0], line[1]))
-            human.append(line[2])
-    return word_pairs, human
-
-
 # Write an evaluation report (csv), computing correlations
-def write_report(f_name, similarities_1, similarities_2, unused_pairs):
+def write_report(f_name, similarities_1, unused_pairs):
     phys_cor = np.array([tup[1] for tup in similarities_1]).astype(np.float)
     expert_cor = np.array([tup[2] for tup in similarities_1]).astype(np.float)
     sim_1_cor = np.array([tup[3] for tup in similarities_1]).astype(np.float)
-    human_cor = np.array([tup[1] for tup in similarities_2]).astype(np.float)
-    sim_2_cor = np.array([tup[2] for tup in similarities_2]).astype(np.float)
     with open(f_name, "w") as f:
         f.write("W1,W2,Phys.,Expert,Human,Similarity\n")
         for tup in similarities_1:
             line = "{},{},{},{},{},{}\n".format(tup[0][0], tup[0][1], tup[1], tup[2], "NA", tup[3])
             print("line:", line)
             f.write(line)
-        for tup in similarities_2:
-            line = "{},{},{},{},{},{}\n".format(tup[0][0], tup[0][1], "NA", "NA", tup[1], tup[2])
-            f.write(line)
         f.write("Physician Correlation: {}\n".format(pearsonr(phys_cor, sim_1_cor)))
         f.write("Expert Correlation: {}\n".format(pearsonr(expert_cor, sim_1_cor)))
-        f.write("Human Correlation: {}\n".format(pearsonr(human_cor, sim_2_cor)))
         f.write("Unused Pairs:\n")
         line = ""
         for pair in unused_pairs:
