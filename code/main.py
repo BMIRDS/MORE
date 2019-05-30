@@ -122,8 +122,8 @@ def main(_):
         with tf.Graph().as_default(), tf.Session(config=tf.ConfigProto(allow_soft_placement=True)) as session:
             with tf.device("/cpu:0"):
                 model = Word2Vec(opts, session)
-                model.get_embeddings_from_ckpt('./Results/wup_lch_nam/com_30_p/')
-                model.get_eval_sims("./Results/wup_lch_nam/com_30_p_report.csv", eval_ds=FLAGS.eval_ds)
+                model.get_embeddings_from_ckpt('./Results/wup_lch_nam/com_90_p/')
+                model.get_eval_sims("./Results/wup_lch_nam/com_90_p_report.csv", eval_ds=FLAGS.eval_ds)
 
 if __name__ == "__main__":
     tf.app.run()
