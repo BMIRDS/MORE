@@ -1,6 +1,8 @@
-# Multi-Ontology Refined Embeddings (MORE): A Hybrid Multi-Ontology and Corpus-based Semantic Representation for Biomedical Concepts
+# Multi-Ontology Refined Embeddings (MORE)
 
-By Steven Jiang and Saeed Hassanpour
+Code for the paper "[Multi-Ontology Refined Embeddings (MORE): A Hybrid Multi-Ontology and Corpus-based Semantic Representation Model for Biomedical Concepts](https://www.sciencedirect.com/science/article/pii/S1532046420302094)".
+
+Steven Jiang, Weiyi Wu, Naofumi Tomita, Craig Ganoe, Saeed Hassanpour
 
 
 ![](./figures/MORE.png)
@@ -98,3 +100,10 @@ python main.py --train_data ./corpus.txt --save_path ./save/ --train_model=False
 Physician Similarity Correlation | Expert Similarity Correlation
 :-------------------------:|:-------------------------:
 ![](./figures/PhysicianGraph.png)  |  ![](./figures/ExpertGraph.png)
+
+
+# Citations
+MORE is an open-source library and is licensed under the GNU General Public License (v3). If you are using this library please cite:
+
+
+```Steven Jiang, Weiyi Wu, Naofumi Tomita, Craig Ganoe, Saeed Hassanpour, “Multi-Ontology Refined Embeddings (MORE): A Hybrid Multi-Ontology and Corpus-based Se-mantic Representation Model for Biomedical Concepts”, Journal of Biomedical Informatics, 111:103581, 2020.```
